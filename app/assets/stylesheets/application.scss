@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "all";
+
+ .center-column{
+  float: none !important;
+  margin: 0 auto !important;
+}
