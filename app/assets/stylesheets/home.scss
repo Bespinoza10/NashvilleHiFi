@@ -19,27 +19,52 @@ header.home-bg{
       text-align: center;
       letter-spacing: 12px;
     }
-    .appt-btn{
-      outline: 6px solid $white;
-      padding: 0em 1.5em !important;
-      letter-spacing: 3px;
-      background: none;
+    div.text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 900px;
+      transform: translateX(-50%) translateY(-50%);
+      list-style: none;
+      text-align: center;
     }
-  }
-  div.bg-text-mobile {
-    display: none;
-    padding-top: 15vh;
-    h1 {
+    
+    
+    
+    div.text h1 {
+      display: inline-block;
+      float: left;
+      font-weight: 700;
+      font-size: 4em;
       color: #fff;
-      text-align: left;
-      margin-left: 20px;
-      letter-spacing: 8px;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      max-width: 2em;
     }
-    .appt-btn{
-      outline: 6px solid $white;
-      padding: 0px;
-      letter-spacing: 3px;
-      background: none;
+    div.text.hidden h1.spaced {
+      padding-left: 0;
+    }
+    div.text h1.spaced {
+      padding-left: 0.5em;
+    }
+    
+    div.text.hidden h1.ghost {
+      opacity: 0;
+      max-width: 0;
+    }
+
+    div.subText {
+      position: fixed;
+      opacity: 0;
+      top: 60%;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+    }
+    div.subText.hidden h4.ghost {
+      
+      max-width: 0;
     }
   }
 }

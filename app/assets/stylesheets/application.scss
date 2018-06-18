@@ -16,9 +16,14 @@
 
  @import "all";
 
+
  .center-column{
   float: none !important;
   margin: 0 auto !important;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
 }
 
 nav {
@@ -30,25 +35,25 @@ nav {
 }
 
 @-webkit-keyframes color-fade {
-  0% { border-bottom-color: #33d997; }
+  0% { border-bottom-color: #9074cd; }
   25% { border-bottom-color: #fffc0c; }
   50% { border-bottom-color: #0098e4; }
-  75% { border-bottom-color: #06fbff; }
+  75% { border-bottom-color: #33d997; }
   100% { border-bottom-color: #7606ff; }
 }
 
 @-moz-keyframes color-fade {
-  0% { border-bottom-color: #33d997; }
+  0% { border-bottom-color: #9074cd; }
   25% { border-bottom-color: #fffc0c; }
   50% { border-bottom-color: #0098e4; }
-  75% { border-bottom-color: #06fbff; }
+  75% { border-bottom-color: #33d997; }
   100% { border-bottom-color: #7606ff; }
 }
 
 @keyframes color-fade {
-  0% { border-bottom-color: #33d997; }
+  0% { border-bottom-color: #9074cd; }
   25% { border-bottom-color: #fffc0c; }
   50% { border-bottom-color: #0098e4; }
-  75% { border-bottom-color: #06fbff; }
+  75% { border-bottom-color: #33d997; }
   100% { border-bottom-color: #7606ff; }
 }
