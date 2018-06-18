@@ -20,3 +20,35 @@
   float: none !important;
   margin: 0 auto !important;
 }
+
+nav {
+  background-color: $black-grey;
+  border-bottom: 4px solid;
+  -webkit-animation: color-fade 10s infinite;
+  -moz-animation: color-fade 10s infinite;
+  animation: color-fade 10s infinite;
+}
+
+@-webkit-keyframes color-fade {
+  0% { border-bottom-color: #33d997; }
+  25% { border-bottom-color: #fffc0c; }
+  50% { border-bottom-color: #0098e4; }
+  75% { border-bottom-color: #06fbff; }
+  100% { border-bottom-color: #7606ff; }
+}
+
+@-moz-keyframes color-fade {
+  0% { border-bottom-color: #33d997; }
+  25% { border-bottom-color: #fffc0c; }
+  50% { border-bottom-color: #0098e4; }
+  75% { border-bottom-color: #06fbff; }
+  100% { border-bottom-color: #7606ff; }
+}
+
+@keyframes color-fade {
+  0% { border-bottom-color: #33d997; }
+  25% { border-bottom-color: #fffc0c; }
+  50% { border-bottom-color: #0098e4; }
+  75% { border-bottom-color: #06fbff; }
+  100% { border-bottom-color: #7606ff; }
+}
