@@ -20,7 +20,7 @@ header.home-bg{
       letter-spacing: 12px;
     }
     div.text {
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       width: 900px;
@@ -54,7 +54,7 @@ header.home-bg{
     }
 
     div.subText {
-      position: fixed;
+      position: absolute;
       opacity: 0;
       top: 60%;
       width: 90%;
