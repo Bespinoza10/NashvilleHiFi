@@ -1,0 +1,14 @@
+@import "all";
+#products{
+  padding-top: 10%;
+  .product-title-container{
+    h1{
+      background: $black-grey;
+      color: #fff;
+      font-size: 35px;
+      text-align: left;
+      max-width: 190px;
+      padding: 20px;
+    }
+  }
+}

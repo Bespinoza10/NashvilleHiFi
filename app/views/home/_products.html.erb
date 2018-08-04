@@ -1,0 +1,44 @@
+<div id="products" class="row">
+  <div class="container">
+    <div class="product-title-container col s12 m12 l12">
+      <h1>Products</h1>
+    </div>
+  </div>
+  <div class="col s12" id="all-products">
+    <div class="col s12">
+      <div class="your-class">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+</script>
