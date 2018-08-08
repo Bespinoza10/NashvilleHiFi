@@ -1,6 +1,6 @@
 @import "all";
 #products{
-  padding-top: 10%;
+  margin-top: 10%;
   .product-title-container{
     h1{
       background: $black-grey;
@@ -9,6 +9,33 @@
       text-align: left;
       max-width: 190px;
       padding: 20px;
+    }
+  }
+  #all-products{
+    margin-top: 5%;
+    h3{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .slick-slider{
+      margin-top: 1%;
+      .slick-prev::before, .slick-next::before {
+        color: #FFF;
+      }
+      .slick-next{
+        right: 15px;
+        color: #fff;
+      }
+      .slick-prev{
+        left: 15px;
+        color: #fff
+      }
+      // .slick-current{
+      //   transform: scale(1.1);
+      // }
+      img{
+        max-width: 100%;
+      }
     }
   }
 }

@@ -1,3 +1,8 @@
+<!-- Slick workaround for TurboLinks -->
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
+
 <div id="products" class="row">
   <div class="container">
     <div class="product-title-container col s12 m12 l12">
@@ -5,40 +10,25 @@
     </div>
   </div>
   <div class="col s12" id="all-products">
-    <div class="col s12">
-      <div class="your-class">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+    <div id="streaming-audio" class="col s12">
+      <div class="container">
+        <h3>Streaming Audio</h3>
       </div>
+      <div class="col s12 slick-slider">
+        <div class="multiple-items">
+          <div><img class="repsonsive-img" src="assets/products/NAD-M50.2.jpg" alt=""></div>
+          <div><img class="repsonsive-img" src="assets/products/BS-Node2.jpg" alt=""></div>
+          <div><img class="repsonsive-img" src="assets/products/NAD-M50.2.jpg" alt=""></div>
+          <div><img class="repsonsive-img" src="assets/products/BS-Node2.jpg" alt=""></div>
+        </div>
+      </div>
+      <script>
+        $('.multiple-items').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        });
+      </script>
     </div>
   </div>
 </div>
-
-<script>
-  $('.center').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});
-</script>
