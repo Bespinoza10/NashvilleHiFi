@@ -1,13 +1,27 @@
 <div class="row">
-  <div class="container">
-    <div class="col s12">
-      <%= @product.name %>
-      <br>
-      <%= @product.description %>
-      <br>
-      <%= image_tag @product.small_img.url %>
-      <%= image_tag @product.big_img_one.url %>
-      <%= image_tag @product.big_img_two.url %>
+  <div class="col s12 no-padding">
+    <div class="col s12 m6 product-slider no-padding">
+      <div class="single-item" style="margin: 0px;">
+        <div><%= image_tag @product.big_img_one.url %></div>
+        <div><%= image_tag @product.big_img_two.url %></div>
+      </div>
     </div>
+    <div class="col s12 m6">
+      <div class="container">
+        <h2><%= @product.name %></h2>
+        <p><%= @product.description %></p>
+      </div>
+    </div>
+    <br>
+    <br>
   </div>
 </div>
+<script>
+  $('.single-item').slick({
+    arrows: true,
+    speed: 500,
+    autoplay: true,
+    prevArrow: '<i class="fa fa-angle-left custom-arrow prev "></i>',
+    nextArrow: '<i class="fas fa-angle-right custom-arrow next"></i>'
+  });
+</script>

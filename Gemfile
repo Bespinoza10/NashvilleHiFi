@@ -27,6 +27,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 
 # Extra Added Gems by espinozabrand
+gem "font-awesome-rails"
 gem 'materialize-sass'
 gem 'mail_form'
 gem 'jquery-rails'

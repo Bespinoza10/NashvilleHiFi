@@ -17,25 +17,5 @@
       font-size: 30px;
       font-weight: bold;
     }
-    .slick-slider{
-      margin-top: 1%;
-      .slick-prev::before, .slick-next::before {
-        color: #FFF;
-      }
-      .slick-next{
-        right: 15px;
-        color: #fff;
-      }
-      .slick-prev{
-        left: 15px;
-        color: #fff
-      }
-      // .slick-current{
-      //   transform: scale(1.1);
-      // }
-      img{
-        max-width: 100%;
-      }
-    }
   }
 }
