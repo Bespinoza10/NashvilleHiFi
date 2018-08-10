@@ -16,6 +16,18 @@
       <%= f.text_area :description, {class: 'validate materialize-textarea'}%>
       <label>Project Description</label>
     </div>
+    <div class="input-field col s12">
+      <%= f.select(:product_type, options_for_select(
+        [ ['Streaming Audio', 'Streaming Audio'], 
+          ['Amplifiers', 'Amplifiers'],
+          ['Preamps', 'Preamps'],
+          ['Integrated Amps', 'Integrated Amps'],
+          ['Speakers', 'Speakers'],
+          ['Cables and Interconnects', 'Cables and Interconnects'],
+          ['Headphones', 'Headphones'],
+          ['Turntables', 'Turntables'] ])) %>
+      <label>Product Type</label>
+    </div>
   </div>
 
   <div class="col s12 m6">
@@ -55,6 +67,10 @@
       </div>
     </div>
   </div>
-
   <%= f.submit %>
+  <script>
+     $(document).ready(function() {
+      $('select').material_select();
+    }); 
+  </script>
 <% end %>

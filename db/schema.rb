@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_025559) do
+ActiveRecord::Schema.define(version: 2018_08_10_211544) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_025559) do
     t.string "big_img_two_content_type"
     t.bigint "big_img_two_file_size"
     t.datetime "big_img_two_updated_at"
+    t.string "product_type"
   end
 
 end
