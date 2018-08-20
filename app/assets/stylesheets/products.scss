@@ -21,16 +21,9 @@
 }
 
 // Show
-
-#product-specs{
-  background: #000;
-  .product-text{
-    color: #fff;
-    .product-type{
-      color: $blue;
-    }
-    p{
-      font-size: 16px;
-    }
-  }
+.product-type{
+  color: $blue;
+}
+p{
+  font-size: 16px;
 }

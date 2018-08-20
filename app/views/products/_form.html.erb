@@ -7,16 +7,12 @@
       <%end%>
     </ul>
   <%end%>
-  <div class="col s12 m6">
+  <div class="col s12">
     <div class="input-field col s12 m12">
       <%= f.text_field :name, {class: 'validate'}%>
       <label>Product Name:</label>
     </div>
-    <div class="input-field col s12">
-      <%= f.text_area :description, {class: 'validate materialize-textarea'}%>
-      <label>Project Description</label>
-    </div>
-    <div class="input-field col s12">
+    <div class="input-field col s8">
       <%= f.select(:product_type, options_for_select(
         [ ['Streaming Audio', 'Streaming Audio'], 
           ['Amplifiers', 'Amplifiers'],
@@ -28,10 +24,23 @@
           ['Turntables', 'Turntables'] ])) %>
       <label>Product Type</label>
     </div>
+    <div class="input-field col s4">
+      <%= f.label :color %>
+      <%= f.text_field :color %>
+    </div>
+    <div class="input-field col s12">
+      <%= f.text_area :description, {class: 'validate materialize-textarea'}%>
+      <label>Project Description</label>
+    </div>
   </div>
 
-  <div class="col s12 m6">
+  <div class="col s12" style="margin-top: 5%;">
+    <h4>Upload Product Photos</h4>
     <div class="input-field col s12 m12">
+      <% if @product.small_img.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.small_img.url(:medium), class: "img-responsive" %>
+      <%end%>
       <div class="file-field input-field">
         <div class="btn">
           <span>Slider Image</span>
@@ -44,6 +53,10 @@
     </div>
 
     <div class="input-field col s12 m12">
+      <% if @product.big_img_one.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.big_img_one.url(:medium), class: "img-responsive" %>
+      <%end%>
       <div class="file-field input-field">
         <div class="btn">
           <span>Product Image 1</span>
@@ -56,6 +69,10 @@
     </div>
 
     <div class="input-field col s12 m12">
+      <% if @product.big_img_two.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.big_img_two.url(:medium), class: "img-responsive" %>
+      <%end%>
       <div class="file-field input-field">
         <div class="btn">
           <span>Product Image 2</span>

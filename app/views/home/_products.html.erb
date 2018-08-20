@@ -10,25 +10,26 @@
     </div>
   </div>
   <div class="col s12" id="all-products">
-    <div id="streaming-audio" class="col s12">
-      <div class="container">
-        <h3>Streaming Audio</h3>
-      </div>
-      <div class="col s12 slick-slider">
-        <div class="multiple-items">
-          <div><img class="repsonsive-img" src="assets/products/NAD-M50.2.jpg" alt=""></div>
-          <div><img class="repsonsive-img" src="assets/products/BS-Node2.jpg" alt=""></div>
-          <div><img class="repsonsive-img" src="assets/products/NAD-M50.2.jpg" alt=""></div>
-          <div><img class="repsonsive-img" src="assets/products/BS-Node2.jpg" alt=""></div>
+    <%= @products.each do |prod| %>
+      <% if prod.product_type == "Streaming Audio"%>
+        <div id="streaming-audio" class="col s12">
+          <div class="container">
+            <h3>Streaming Audio</h3>
+          </div>
+          <div class="col s12 slick-slider">
+            <div class="multiple-items">
+              <div><img class="repsonsive-img" src="<%= prod.small_img %>" alt="<%= prod.name %>"></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <script>
-        $('.multiple-items').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3
-        });
-      </script>
-    </div>
+      <% end %>
+    <% end %>
+    <script>
+      $('.multiple-items').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    </script>
   </div>
 </div>
