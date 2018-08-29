@@ -8,10 +8,10 @@
     </div>
     <div class="col s12 m12 l5 product-text">
       <div class="container">
-        <% if @product.color = "#fff"%>
-          <h2 class="black"><%= @product.name %></h2>
-        <% elsif @product.color = "#000"%>
-          <h2 class="white"><%= @product.name %></h2>
+        <% if @product.color = "#fff" || "#fff " %>
+          <h2 style="color: #fff;"><%= @product.name %></h2>
+        <% elsif @product.color = "#000" || "#000"%>
+          <h2 style="color: #000;""><%= @product.name %></h2>
         <% end %>
         <br>
         <hr>
@@ -19,9 +19,12 @@
         <br>
         <% if @product.color = "#fff"%>
           <p style="color: #fff"><%= @product.description %></p>
+          <p style="color: #fff;">In store purchase only</p>
         <% elsif @product.color = "#000" %>
           <p class="black"><%= @product.description %></p>
+          <p style="color: #000;">In store purchase only</p>
         <% end %>
+        
       </div>
     </div>
     <br>

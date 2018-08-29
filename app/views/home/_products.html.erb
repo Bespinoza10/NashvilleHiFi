@@ -10,15 +10,29 @@
     </div>
   </div>
   <div class="col s12" id="all-products">
-    <%= @products.each do |prod| %>
-      <% if prod.product_type == "Streaming Audio"%>
+    <% @products.each do |prod| %>
+      <% @prod_streaming = prod.product_type === "Streaming Audio" %>
+      <% if @prod_streaming.present? %>
         <div id="streaming-audio" class="col s12">
           <div class="container">
             <h3>Streaming Audio</h3>
           </div>
           <div class="col s12 slick-slider">
             <div class="multiple-items">
-              <div><img class="repsonsive-img" src="<%= prod.small_img %>" alt="<%= prod.name %>"></div>
+              <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% @prod_amps = prod.product_type === "Amplifiers" %>
+      <% if @prod_amps.present? %>
+        <div id="streaming-audio" class="col s12">
+          <div class="container">
+            <h3>Amplifiers</h3>
+          </div>
+          <div class="col s12 slick-slider">
+            <div class="multiple-items">
+              <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
             </div>
           </div>
         </div>
