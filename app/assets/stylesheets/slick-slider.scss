@@ -25,16 +25,15 @@
     color: #fff;
   }
   .slick-prev::before, .slick-next::before {
-    color: #FFF;
+    color: #000;
+    font-size: 35px;
   }
  .slick-prev{
     left: 15px;
-    color: red;
     z-index: 1;
   }
   .slick-next{
     right: 15px;
-    color: #fff;
   }
   img{
     max-width: 100%;
