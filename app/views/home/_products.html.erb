@@ -6,9 +6,20 @@
 <div id="products" class="row">
   <div class="container">
     <div class="product-title-container col s12 m12 l12">
-      <h1>Products</h1>
-      <hr>
-      <p>Don't see the product you need? Don't worry. These are just our most popular products. We offer a lot more. Feel free to contact us or pass by the store.</p>
+      <% if user_signed_in? %>
+        <div class="col s10">
+          <h1>Products</h1>
+          <hr>
+          <p>Don't see the product you need? Don't worry. These are just our most popular products. We offer a lot more. Feel free to contact us or pass by the store.</p>
+        </div>
+        <div class="col s2">
+          <%= link_to "Add", new_product_path, class: "btn btn-blue" %>
+        </div>
+      <% else %>
+        <h1>Products</h1>  
+        <hr>
+        <p>Don't see the product you need? Don't worry. These are just our most popular products. We offer a lot more. Feel free to contact us or pass by the store.</p>
+      <% end %>
     </div>
   </div>
   <div class="col s12" id="all-products">
