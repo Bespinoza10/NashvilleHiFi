@@ -1,0 +1,115 @@
+<%= form_for @product do |f| %>
+  <% if @product.errors.any?%>
+    <h2><%= pluralize(@products.errors.count, "error") %> prevented this client from saving:</h2>
+    <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <%end%>
+    </ul>
+  <%end%>
+  <div class="col s12">
+    <div class="input-field col s12 m12">
+      <%= f.text_field :name, {class: 'validate'}%>
+      <label>Product Name:</label>
+    </div>
+    <div class="input-field col s8">
+      <% if @product.product_type.present?%>
+        <%= f.select(:product_type, options_for_select(
+          [ ['Streaming Audio', 'Streaming Audio'], 
+            ['Amplifiers', 'Amplifiers'],
+            ['Preamps', 'Preamps'],
+            ['Integrated Amps', 'Integrated Amps'],
+            ['Speakers', 'Speakers'],
+            ['Cables and Interconnects', 'Cables and Interconnects'],
+            ['Headphones', 'Headphones'],
+            ['Turntables', 'Turntables'] ], @product.product_type )) %>
+        <label>Product Type</label>
+      <% else %>
+        <%= f.select(:product_type, options_for_select(
+        [ ['Streaming Audio', 'Streaming Audio'], 
+          ['Amplifiers', 'Amplifiers'],
+          ['Preamps', 'Preamps'],
+          ['Integrated Amps', 'Integrated Amps'],
+          ['Speakers', 'Speakers'],
+          ['Cables and Interconnects', 'Cables and Interconnects'],
+          ['Headphones', 'Headphones'],
+          ['Turntables', 'Turntables'] ])) %>
+        <label>Product Type</label>
+      <% end %>
+    </div>
+    <div class="input-field col s4">
+      <% if @product.color.present?%>
+        <%= f.select(:color, options_for_select(
+          [ ['White', 'White'], 
+            ['Black', 'Black'] ], @product.color )) %>
+        <%= f.label "Choose Image Background Color" %>
+      <% else %>
+        <%= f.select(:color, options_for_select(
+        [ ['White', 'White'], 
+          ['Black', 'Black'] ])) %>
+        <%= f.label "Choose Image Background Color" %>
+      <%end%>
+    </div>
+    <div class="input-field col s12">
+      <%= f.text_area :description, {class: 'validate materialize-textarea'}%>
+      <label>Project Description</label>
+    </div>
+  </div>
+
+  <div class="col s12" style="margin-top: 5%;">
+    <h4>Upload Product Photos</h4>
+    <div class="input-field col s12 m12">
+      <% if @product.small_img.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.small_img.url(:medium), class: "img-responsive" %>
+      <%end%>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Slider Image</span>
+          <%= f.file_field :small_img, {class: 'validate'}%>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12 m12">
+      <% if @product.big_img_one.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.big_img_one.url(:medium), class: "img-responsive" %>
+      <%end%>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Product Image 1</span>
+          <%= f.file_field :big_img_one, {class: 'validate'}%>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12 m12">
+      <% if @product.big_img_two.exists? %>
+        <p>Current Photo</p>
+        <%= image_tag @product.big_img_two.url(:medium), class: "img-responsive" %>
+      <%end%>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Product Image 2</span>
+          <%= f.file_field :big_img_two, {class: 'validate'}%>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= f.submit %>
+  <script>
+     $(document).ready(function() {
+      $('select').material_select();
+    }); 
+  </script>
+<% end %>

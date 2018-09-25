@@ -1,0 +1,41 @@
+@import "all";
+
+.single-item, .slick-slider{
+  margin-top: 1%;
+  .slick-arrow{
+    color: #FFF;
+  }
+  .custom-arrow{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+  }
+
+  .prev{
+    left: 55px;
+    color: #fff;
+    z-index: 1;
+  }
+  .next{
+    right: 60px;
+    color: #fff;
+  }
+  .slick-prev::before, .slick-next::before {
+    color: #000;
+    font-size: 35px;
+  }
+ .slick-prev{
+    left: 15px;
+    z-index: 1;
+  }
+  .slick-next{
+    right: 15px;
+  }
+  img{
+    max-width: 100%;
+  }
+}

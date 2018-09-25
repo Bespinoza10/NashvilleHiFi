@@ -15,11 +15,16 @@
  */
 
  @import "all";
+ @import 'slick';
+ @import 'slick-theme';
 
 
  .center-column{
   float: none !important;
   margin: 0 auto !important;
+}
+.no-padding{
+  padding: 0px;
 }
 
 body{
