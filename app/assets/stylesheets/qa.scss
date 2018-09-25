@@ -1,0 +1,29 @@
+@import "all";
+header.qa-bg{
+  background-image: url('/assets/slogan-qa.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  color: #fff;
+  div.bg-text {
+    padding-top: 25vh;
+    h1, H4 {
+      color: #fff;
+      text-align: center;
+      letter-spacing: 12px;
+    }
+  }
+}
+#qa-section{
+  margin-top: 6%;
+  .qa-accordion{
+    .qa-header{
+      font-size: 20px;
+    }
+    .qa-body{
+      font-size: 18px;
+    }
+  }
+}
