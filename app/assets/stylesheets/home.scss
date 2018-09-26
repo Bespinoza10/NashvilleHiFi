@@ -68,3 +68,16 @@ header.home-bg{
     }
   }
 }
+
+// Footer
+
+footer.nashville-hifi-footer{
+  background: $black-grey;
+  border-top: solid 4px;
+  -webkit-animation: top-color-fade 10s infinite;
+  -moz-animation: top-color-fade 10s infinite;
+  animation: top-color-fade 10s infinite;
+  a{
+    color: $blue;
+  }
+}

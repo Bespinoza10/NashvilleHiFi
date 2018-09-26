@@ -14,7 +14,8 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   </head>
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <nav>
     <div class="container">
       <div class="nav-wrapper">
@@ -32,10 +33,61 @@
       </div>
     </div>
   </nav>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
   <body>
     <%= yield %>
   </body>
+
+  <footer class="nashville-hifi-footer page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Contact Details</h5>
+          <div class="col s12 m4">
+            <p><b>Address:</b></p>
+            <a href="https://www.google.com/maps/dir//6598+TN-100,+Nashville,+TN+37205/@36.0906488,-86.8814413,17z/data=!4m16!1m7!3m6!1s0x886462f5a37dc3fb:0xea62d29c31ebacaa!2s6598+TN-100,+Nashville,+TN+37205!3b1!8m2!3d36.0906445!4d-86.8792526!4m7!1m0!1m5!1m1!1s0x886462f5a37dc3fb:0xea62d29c31ebacaa!2m2!1d-86.8792526!2d36.0906445">
+              6598 TN-100, Nashville, TN 37205
+            </a>
+          </div>
+
+          <div class="col s12 m2">
+            <p><b>Hours:</b></p>
+            <p>Monday - Saturday</p>
+            <p>9AM - 5PM</p>
+          </div>
+
+          <div class="col s12 m2">
+            <p><b>Store Number:</b></p>
+            <a href="tel:6157998002"> (615) 799-8002</a>
+          </div>
+        
+          <div class="col s12 m3 offset-m1">
+            <h5 class="white-text">Nashville HIFI</h5>
+            <ul>
+              <% if current_page?(root_path) %>
+                <li><a href="#!">Join Newsletter</a></li>
+                <li><a href="<%= root_path %>">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/qa">QA</a></li>
+                <li><a href="#!">Contact</a></li>
+              <% else %>
+                <li><a href="#!">Join Newsletter</a></li>
+                <li><a href="<%= root_path %>">Home</a></li>
+                <li><a href="<%= root_path %>#about">About</a></li>
+                <li><a href="http://www.nashvillehifi.com/qa">QA</a></li>
+                <li><a href="#!">Contact</a></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Website Designed and Developed by EspinozaBrand
+      <a class="grey-text text-lighten-4 right" href="<%= new_user_session_path %>">Sign In</a>
+      </div>
+    </div>
+  </footer>
 </html>
