@@ -14,18 +14,34 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   </head>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  
+  <% if notice %>
+    <div id="notice-wrapper">
+      <p class="notice"><%= notice %></p>
+    </div>
+  <%elsif alert%>
+    <div id="notice-wrapper">
+      <p class="alert"><%= alert %></p>
+    </div>
+  <%end%>
+
+
   <nav>
     <div class="container">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img src="/assets/nashvilleHiFi-logo-white.png" alt="Nashville HiFi" style="max-width: 250px;"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="<%= root_path %>">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#products">Products</a></li>
+          <% if current_page?(root_path) %>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+          <% else %>
+            <li><a href="<%= root_path %>#about">About Us</a></li>
+            <li><a href="<%= root_path %>#products">Products</a></li>
+          <% end %>
           <li><a href="/qa">QA</a></li>
-          <li><a href="collapsible.html">Contact</a></li>
+          <li><a href="<%= new_contact_path %>">Contact</a></li>
           <% if user_signed_in? %>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% end %>
@@ -69,13 +85,13 @@
                 <li><a href="<%= root_path %>">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="/qa">QA</a></li>
-                <li><a href="#!">Contact</a></li>
+                <li><a href="<%= new_contact_path %>">Contact</a></li>
               <% else %>
                 <li><a href="#!">Join Newsletter</a></li>
                 <li><a href="<%= root_path %>">Home</a></li>
                 <li><a href="<%= root_path %>#about">About</a></li>
                 <li><a href="http://www.nashvillehifi.com/qa">QA</a></li>
-                <li><a href="#!">Contact</a></li>
+                <li><a href="<%= new_contact_path %>">Contact</a></li>
               <% end %>
             </ul>
           </div>
