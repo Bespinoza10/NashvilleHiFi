@@ -48,6 +48,8 @@
             <% @prod_amps = prod.product_type === "Amplifiers" %>
             <% if @prod_amps.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_amps.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -64,6 +66,8 @@
             <% @prod_preamps = prod.product_type === "Preamps" %>
             <% if @prod_preamps.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_preamps.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -80,6 +84,8 @@
             <% @prod_intamps = prod.product_type === "Integrated Amps" %>
             <% if @prod_intamps.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_intamps.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -96,6 +102,8 @@
             <% @prod_speakers = prod.product_type === "Speakers" %>
             <% if @prod_speakers.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_speakers.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -112,6 +120,8 @@
             <% @prod_cables = prod.product_type === "Cables and Interconnects" %>
             <% if @prod_cables.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_cables.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -128,6 +138,8 @@
             <% @prod_headphones = prod.product_type === "Headphones" %>
             <% if @prod_headphones.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_headphones.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
@@ -143,6 +155,8 @@
             <% @prod_turntables = prod.product_type === "Turntables" %>
             <% if @prod_turntables.present? %>
               <div><%= link_to image_tag(prod.small_img.url()), prod %></div>
+            <% elsif @prod_turntables.blank? %>
+              <p style="text-align: center;">Coming Soon...</p>
             <% end %>
           <% end %>
         </div>
