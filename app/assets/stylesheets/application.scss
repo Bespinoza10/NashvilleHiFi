@@ -42,3 +42,21 @@ nav {
 .btn-blue{
   background: $blue;
 }
+
+#notice-wrapper{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1050;
+  background: $blue;
+  p{
+    padding: 1.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+}
