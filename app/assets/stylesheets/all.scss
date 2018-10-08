@@ -2,9 +2,6 @@
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700i');
-@import "materialize/components/color";
-$primary-color: color("purple", "darken-4") !default;
-$secondary-color: color("yellow", "base") !default;
 $black-grey: color("grey", "darken-4") !default;
 $white: #fff;
 $blue: #55c3d0;
