@@ -1,9 +1,6 @@
-class Contact < ApplicationRecord
-
-  
+class Contact < MailForm::Base
   attribute :name,           :validate => true
   attribute :email,          :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :number_of_guest,   :validate => true
   attribute :newsletter,   :validate => false
   attribute :message,   :validate => false
   attribute :comments,   :validate => false
@@ -13,7 +10,7 @@ class Contact < ApplicationRecord
     {
       :subject => "Nashville HIFI",
       :to => ['espinozab100@gmail.com'],
-      :from => %("#{guest_name}" <#{email}>)
+      :from => %("#{name}" <#{email}>)
     }
   end
 end

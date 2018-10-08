@@ -37,6 +37,13 @@ nav {
   -webkit-animation: color-fade 10s infinite;
   -moz-animation: color-fade 10s infinite;
   animation: color-fade 10s infinite;
+  ul li a{
+    @include transition(all, .3s);
+    &:hover{
+      @include transition(all, .3s);
+      background: $blue;
+    }
+  }
 }
 
 .btn-blue{

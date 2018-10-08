@@ -9,6 +9,15 @@ $black-grey: color("grey", "darken-4") !default;
 $white: #fff;
 $blue: #55c3d0;
 
+
+//transition mixin
+@mixin transition($transition...) {
+  -moz-transition:    $transition !important;
+  -o-transition:      $transition !important;
+  -webkit-transition: $transition !important;
+  transition:         $transition !important;
+}
+
 @-webkit-keyframes color-fade {
   0% { border-bottom-color: #9074cd; }
   25% { border-bottom-color: #fffc0c; }
@@ -55,4 +64,30 @@ $blue: #55c3d0;
   50% { border-top-color: #0098e4; }
   75% { border-top-color: #33d997; }
   100% { border-top-color: #7606ff; }
+}
+
+
+//nav
+@keyframes nav-links-hover {
+  0% { background: #9074cd; }
+  25% { background: #fffc0c; }
+  50% { background: #0098e4; }
+  75% { background: #33d997; }
+  100% { background: #7606ff; }
+}
+
+@-webkit-keyframes nav-links-hover {
+  0% { background: #9074cd; }
+  25% { background: #fffc0c; }
+  50% { background: #0098e4; }
+  75% { background: #33d997; }
+  100% { background: #7606ff; }
+}
+
+@-moz-keyframes nav-links-hover {
+  0% { background: #9074cd; }
+  25% { background: #fffc0c; }
+  50% { background: #0098e4; }
+  75% { background: #33d997; }
+  100% { background: #7606ff; }
 }
