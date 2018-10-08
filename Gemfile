@@ -31,7 +31,7 @@ gem 'mail_form'
 gem 'jquery-rails'
 gem "jquery-slick-rails"
 gem "paperclip"
-gem "devise"
+gem 'devise', '~> 4.2'
 gem "pg"
 
 group :development, :test do
